@@ -17,11 +17,6 @@ export class GetAllCidadeController {
                     }
                 }
             }
-
-            // include: {
-            //     estado: true
-            // }
-
         });
         return response.json(cidades);
 

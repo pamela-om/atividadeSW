@@ -13,18 +13,18 @@ tipoRouter.post('/tipos', createTipoSanguineoController.handle)
 
 // Get All
 const getAllTipoSanguineoController = new GetAllTipoSanguineoController();
-estadoRouter.get('/tiposSanguineos', getAllTipoSanguineoController.handle)
+tipoRouter.get('/tiposSanguineos', getAllTipoSanguineoController.handle)
 
 // Get by ID
 const getByIdTipoSanguineoController = new GetByIdTipoSanguineoController();
-estadoRouter.get('/tiposSanguineos/:id', getByIdTipoSanguineoController.handle);
+tipoRouter.get('/tiposSanguineos/:id', getByIdTipoSanguineoController.handle);
 
 // Update
 const updateTipoSanguineoController = new UpdateTipoSanguineoController()
-estadoRouter.put('/tiposSanguineos', updateTipoSanguineoController.handle)
+tipoRouter.put('/tiposSanguineos', updateTipoSanguineoController.handle)
 
 // Delete
 const deleteTipoSanguineoController = new DeleteTipoSanguineoController();
-estadoRouter.delete('/tiposSanguineos', deleteTipoSanguineoController.handle)
+tipoRouter.delete('/tiposSanguineos', deleteTipoSanguineoController.handle)
 
 export { tipoRouter } 

@@ -1,12 +1,12 @@
 import { prisma } from '../../database/client.js'
 
-export class UpdatePessoaController {
+export class UpdateLocalController {
 
     async handle(request, response) {
 
-        const { id, nome, rua, numero, complemento, cidade_id, tipo_id } = request.body;
+        const { id, nome, rua, numero, complemento, cidade_id } = request.body;
 
-        const pessoa = await prisma.pessoa.update({
+        const local = await prisma.localColeta.update({
 
             where: {
                 id: parseInt(id)
@@ -21,17 +21,12 @@ export class UpdatePessoaController {
                         id: cidade_id
                     }
                 },
-                tipo: {
-                    connect: {
-                        id: tipo_id
-                    }
-                }
 
             }
 
         });
 
-        return response.json(pessoa);
+        return response.json(local);
 
     }
 

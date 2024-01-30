@@ -13,19 +13,19 @@ pessoaRouter.post('/pessoas', createPessoaController.handle)
 
 // Get All
 const getAllPessoaController = new GetAllPessoaController();
-estadoRouter.get('/pessoas', getAllPessoaController.handle)
+pessoaRouter.get('/pessoas', getAllPessoaController.handle)
 
 // Get by ID
 const getByIdPessoaController = new GetByIdPessoaController();
-estadoRouter.get('/pessoas/:id', getByIdPessoaController.handle);
+pessoaRouter.get('/pessoas/:id', getByIdPessoaController.handle);
 
 // Update
 const updatePessoaController = new UpdatePessoaController()
-estadoRouter.put('/pessoas', updatePessoaController.handle)
+pessoaRouter.put('/pessoas', updatePessoaController.handle)
 
 // Delete
 const deletePessoaController = new DeletePessoaController();
-estadoRouter.delete('/pessoas', deletePessoaController.handle)
+pessoaRouter.delete('/pessoas', deletePessoaController.handle)
 
 
 export { pessoaRouter } 
