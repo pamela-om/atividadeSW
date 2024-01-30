@@ -7,6 +7,7 @@ Este projeto consiste no desenvolvimento de uma API RESTful para gerenciar infor
 - TypeScript
 - Prisma como ORM
 - MySQL como banco de dados
+- Postman para as requisições
   
 ## Execução
 1. clonar: git clone https://github.com/pamela-om/atividadeSW.git
